@@ -27,7 +27,7 @@ func GenBytes() []byte {
 // ----------------------------------------------------------------------------
 
 func main() {
-	benchmark.Benchmark(func() {
+	benchmark.RunAndDisplay(func() {
 		GenBytes()
 	}, benchmark.Times)
 }

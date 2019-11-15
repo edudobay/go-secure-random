@@ -11,12 +11,12 @@ import (
 func main() {
 	fmt.Printf("## BigIntRng\n")
 	maxInt := rng.MaxBigInt(benchmark.Bytes)
-	benchmark.Benchmark(func() {
+	benchmark.RunAndDisplay(func() {
 		rng.GenBigInt(maxInt)
 	}, benchmark.Times)
 
 	fmt.Printf("## BytesRng\n")
-	benchmark.Benchmark(func() {
+	benchmark.RunAndDisplay(func() {
 		rng.GenBytes(benchmark.Bytes)
 	}, benchmark.Times)
 }
