@@ -30,7 +30,7 @@ func printer(quiet bool) func(string) {
 
 func main() {
 	var bytes = flag.Int("bytes", DefaultBytes, "byte length of generated secret")
-	var count = flag.Int("count", 1, "generate this many secrets (default: 1)")
+	var count = flag.Int("count", 1, "generate this many secrets")
 	var quiet = flag.Bool("quiet", false, "do not output anything (only benchmark)")
 
 	flag.Parse()
